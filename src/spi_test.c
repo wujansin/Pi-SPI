@@ -18,7 +18,7 @@ int main (void)
 	struct timeval tv;
 	pid_t pid;
 	
-	printf("Build Time %s, %s \n", __TIME__, __DATE__ );
+	printf("Build Time  :%s, %s \n", __TIME__, __DATE__ );
 	
 	/* Set up GPIO */
 	wiringPiSetup() ;
