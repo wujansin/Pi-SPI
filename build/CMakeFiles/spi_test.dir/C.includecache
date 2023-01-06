@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tbox/project/pi-io-test/spi/src/spi_test.c
+stdio.h
+-
+wiringPi.h
+-
+time.h
+-
+sys/time.h
+-
+unistd.h
+-
+
