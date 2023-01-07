@@ -1,4 +1,4 @@
 # Raspberry Pi SPI Interface 
 -
 ## SPI 
-## (1)
+## (1) (2) (3)
