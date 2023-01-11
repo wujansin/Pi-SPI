@@ -91,6 +91,7 @@ int main (void)
 	{
 		/* parent process */
 		int ch;
+		int spi_fd;
 		//cout << "In Parent process, pid =" <<getpid() <<endl;		
 		showCommand();
 		for (;;)
@@ -107,19 +108,34 @@ int main (void)
 					printf("Press 1\n");
 					break;
 				case '2':
-					printf("Press 2: SPI Init\n");
-					wiringPiSPISetup (SPI_CH0, SPI_SPEED);
+					printf("Press 2: SPI CH0 Init\n");
+					spi_fd = wiringPiSPISetup (SPI_CH0, SPI_SPEED);
+					if(spi_fd == -1)
+						cout <<"SPI Setup Channel:"<< SPI_CH0 <<" error"<<endl;
+					else
+						cout <<"SPI Setup Channel:"<< SPI_CH0 <<" OK"<<endl;	
 					break;
 
 				case '3':
 					printf("Press 3: SPI Send Data\n");
 					{
 						unsigned char data[] = { 0x00,0x11,0x22,0x33,0x44,0x55,0x66,0x77,0x88,0x99 };
-						wiringPiSPIDataRW(0, data, sizeof(data));
+						wiringPiSPIDataRW(SPI_CH0, data, sizeof(data));
 					}
 					break;		
 
+				case '4':
+					printf("Press 4: Write Data to W25Q32\n");
+					
+					break;
+
+				case '5':
+					printf("Press 5: Read Data from W25Q32\n");
+					
+					break;
+
 				case 'l':
+
 				case 'L':
 					showCommand();
 					break;	
