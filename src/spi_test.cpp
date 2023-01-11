@@ -3,13 +3,14 @@
 //********************************
 #include <stdio.h>
 #include <wiringPi.h>
+#include <wiringPiSPI.h>
 #include <time.h>
 #include <sys/time.h>
 #include <unistd.h>
 #include <signal.h>
 #include <sys/wait.h>
 #include <iostream>
-#include <wiringPiSPI.h>
+
 
 using namespace std;
 
