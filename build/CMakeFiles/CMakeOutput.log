@@ -1,6 +1,6 @@
-The system is: Linux - 5.15.84-v7l+ - armv7l
+The system is: Linux - 5.10.103-v7l+ - armv7l
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Compiler: /bin/clang-7 
 Build flags: 
 Id flags:  
 
@@ -10,10 +10,10 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/tbox/project/pi-io-test/spi/build/CMakeFiles/3.18.4/CompilerIdC/a.out"
+The C compiler identification is Clang, found in "/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/3.16.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Compiler: /bin/clang++-7 
 Build flags: 
 Id flags:  
 
@@ -23,373 +23,473 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/tbox/project/pi-io-test/spi/build/CMakeFiles/3.18.4/CompilerIdCXX/a.out"
+The CXX compiler identification is Clang, found in "/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0e4d6/fast && /usr/bin/make -f CMakeFiles/cmTC_0e4d6.dir/build.make CMakeFiles/cmTC_0e4d6.dir/build
+make[1]: Entering directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e4d6.dir/testCCompiler.c.o
+/bin/clang-7    -o CMakeFiles/cmTC_0e4d6.dir/testCCompiler.c.o   -c /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0e4d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e4d6.dir/link.txt --verbose=1
+/bin/clang-7      -rdynamic CMakeFiles/cmTC_0e4d6.dir/testCCompiler.c.o  -o cmTC_0e4d6 
+make[1]: Leaving directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
+
+
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_3275f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3275f.dir/build.make CMakeFiles/cmTC_3275f.dir/build
-gmake[1]: Entering directory '/home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o
-/usr/bin/arm-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c
-Using built-in specs.
-COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Run Build Command(s):/usr/bin/make cmTC_781da/fast && /usr/bin/make -f CMakeFiles/cmTC_781da.dir/build.make CMakeFiles/cmTC_781da.dir/build
+make[1]: Entering directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o
+/bin/clang-7   -v -o CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)
+Target: armv6k-unknown-linux-gnueabihf
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/10/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccXlnjl8.s
-GNU C17 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)
-	compiled by GNU C version 10.2.1 20210110, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.0, isl version isl-0.23-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
-ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/include-fixed"
-ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/include"
+InstalledDir: /bin
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8
+Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Candidate multilib: .;@m32
+Selected multilib: .;@m32
+ "/usr/lib/llvm-7/bin/clang" -cc1 -triple armv6k-unknown-linux-gnueabihf -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu mpcore -target-feature +strict-align -target-abi aapcs-linux -mfloat-abi hard -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.gcno -resource-dir /usr/lib/llvm-7/lib/clang/7.0.1 -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-7/lib/clang/7.0.1/include -internal-externc-isystem /usr/include/arm-linux-gnueabihf -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -faddrsig
+clang -cc1 version 7.0.1 based upon LLVM 7.0.1 default target armv6k-unknown-linux-gnueabihf
+ignoring nonexistent directory "/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/lib/gcc/arm-linux-gnueabihf/10/include
  /usr/local/include
+ /usr/lib/llvm-7/lib/clang/7.0.1/include
  /usr/include/arm-linux-gnueabihf
  /usr/include
 End of search list.
-GNU C17 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)
-	compiled by GNU C version 10.2.1 20210110, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.0, isl version isl-0.23-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: b0c2f0ffcfbe7fc710aaf45c31c63944
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o /tmp/ccXlnjl8.s
-GNU assembler version 2.35.2 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.35.2
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-Linking C executable cmTC_3275f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3275f.dir/link.txt --verbose=1
-/usr/bin/arm-linux-gnueabihf-gcc  -v -rdynamic CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -o cmTC_3275f 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Linking C executable cmTC_781da
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_781da.dir/link.txt --verbose=1
+/bin/clang-7     -v -rdynamic CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o  -o cmTC_781da 
+clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)
+Target: armv6k-unknown-linux-gnueabihf
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) 
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3275f'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/10/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccywMmRA.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -o cmTC_3275f /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/10 -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3275f'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-gmake[1]: Leaving directory '/home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp'
+InstalledDir: /bin
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8
+Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Candidate multilib: .;@m32
+Selected multilib: .;@m32
+ "/bin/ld" -export-dynamic -X --hash-style=both --build-id --eh-frame-hdr -m armelf_linux_eabi -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -o cmTC_781da /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /bin/../lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/bin/../lib/gcc/arm-linux-gnueabihf/8 -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib -L/usr/lib/llvm-7/bin/../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/arm-linux-gnueabihf/../../lib -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../.. -L/usr/lib/llvm-7/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /bin/../lib/gcc/arm-linux-gnueabihf/8/crtend.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
+make[1]: Leaving directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
 
 
 
 Parsed C implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/lib/gcc/arm-linux-gnueabihf/10/include]
     add: [/usr/local/include]
+    add: [/usr/lib/llvm-7/lib/clang/7.0.1/include]
     add: [/usr/include/arm-linux-gnueabihf]
     add: [/usr/include]
   end of search list found
-  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/10/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/10/include]
   collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/lib/llvm-7/lib/clang/7.0.1/include] ==> [/usr/lib/llvm-7/lib/clang/7.0.1/include]
   collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
   collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/lib/gcc/arm-linux-gnueabihf/10/include;/usr/local/include;/usr/include/arm-linux-gnueabihf;/usr/include]
+  implicit include dirs: [/usr/local/include;/usr/lib/llvm-7/lib/clang/7.0.1/include;/usr/include/arm-linux-gnueabihf;/usr/include]
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_3275f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3275f.dir/build.make CMakeFiles/cmTC_3275f.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/arm-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_781da/fast && /usr/bin/make -f CMakeFiles/cmTC_781da.dir/build.make CMakeFiles/cmTC_781da.dir/build]
+  ignore line: [make[1]: Entering directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/bin/clang-7   -v -o CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)]
+  ignore line: [Target: armv6k-unknown-linux-gnueabihf]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/10/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccXlnjl8.s]
-  ignore line: [GNU C17 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 10.2.1 20210110  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.0  isl version isl-0.23-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/include-fixed"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [InstalledDir: /bin]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m32]
+  ignore line: [ "/usr/lib/llvm-7/bin/clang" -cc1 -triple armv6k-unknown-linux-gnueabihf -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu mpcore -target-feature +strict-align -target-abi aapcs-linux -mfloat-abi hard -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.gcno -resource-dir /usr/lib/llvm-7/lib/clang/7.0.1 -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-7/lib/clang/7.0.1/include -internal-externc-isystem /usr/include/arm-linux-gnueabihf -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -faddrsig]
+  ignore line: [clang -cc1 version 7.0.1 based upon LLVM 7.0.1 default target armv6k-unknown-linux-gnueabihf]
+  ignore line: [ignoring nonexistent directory "/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/10/include]
   ignore line: [ /usr/local/include]
+  ignore line: [ /usr/lib/llvm-7/lib/clang/7.0.1/include]
   ignore line: [ /usr/include/arm-linux-gnueabihf]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C17 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 10.2.1 20210110  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.0  isl version isl-0.23-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: b0c2f0ffcfbe7fc710aaf45c31c63944]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o /tmp/ccXlnjl8.s]
-  ignore line: [GNU assembler version 2.35.2 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.35.2]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [Linking C executable cmTC_3275f]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3275f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/arm-linux-gnueabihf-gcc  -v -rdynamic CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -o cmTC_3275f ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Linking C executable cmTC_781da]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_781da.dir/link.txt --verbose=1]
+  ignore line: [/bin/clang-7     -v -rdynamic CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o  -o cmTC_781da ]
+  ignore line: [clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)]
+  ignore line: [Target: armv6k-unknown-linux-gnueabihf]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3275f'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/10/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccywMmRA.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -o cmTC_3275f /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/10 -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o]
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccywMmRA.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+  ignore line: [InstalledDir: /bin]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m32]
+  link line: [ "/bin/ld" -export-dynamic -X --hash-style=both --build-id --eh-frame-hdr -m armelf_linux_eabi -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -o cmTC_781da /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /bin/../lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/bin/../lib/gcc/arm-linux-gnueabihf/8 -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib -L/usr/lib/llvm-7/bin/../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/arm-linux-gnueabihf/../../lib -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../.. -L/usr/lib/llvm-7/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /bin/../lib/gcc/arm-linux-gnueabihf/8/crtend.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/bin/ld] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=both] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib/ld-linux-armhf.so.3] ==> ignore
-    arg [-X] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-m] ==> ignore
-    arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_3275f] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/10] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/10]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/10/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../..]
+    arg [cmTC_781da] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8]
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf]
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib]
+    arg [-L/usr/lib/llvm-7/bin/../lib] ==> dir [/usr/lib/llvm-7/bin/../lib]
     arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_3275f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/arm-linux-gnueabihf/../../lib] ==> dir [/usr/lib/arm-linux-gnueabihf/../../lib]
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../..]
+    arg [-L/usr/lib/llvm-7/bin/../lib] ==> dir [/usr/lib/llvm-7/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_781da.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
+    arg [--no-as-needed] ==> ignore
     arg [-lc] ==> lib [c]
     arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/10] ==> [/usr/lib/gcc/arm-linux-gnueabihf/10]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../..] ==> [/usr/lib]
+    arg [--no-as-needed] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/crtend.o] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8] ==> [/lib/gcc/arm-linux-gnueabihf/8]
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib] ==> [/lib]
+  collapse library dir [/usr/lib/llvm-7/bin/../lib] ==> [/usr/lib/llvm-7/lib]
   collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/lib/../lib] ==> [/lib]
   collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf/../../lib] ==> [/usr/lib]
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../..] ==> [/lib]
+  collapse library dir [/usr/lib/llvm-7/bin/../lib] ==> [/usr/lib/llvm-7/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/10;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit dirs: [/lib/gcc/arm-linux-gnueabihf/8;/lib/arm-linux-gnueabihf;/lib;/usr/lib/llvm-7/lib;/usr/lib/arm-linux-gnueabihf;/usr/lib]
   implicit fwks: []
 
 
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_14ab8/fast && /usr/bin/make -f CMakeFiles/cmTC_14ab8.dir/build.make CMakeFiles/cmTC_14ab8.dir/build
+make[1]: Entering directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_14ab8.dir/testCXXCompiler.cxx.o
+/bin/clang++-7     -o CMakeFiles/cmTC_14ab8.dir/testCXXCompiler.cxx.o -c /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_14ab8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14ab8.dir/link.txt --verbose=1
+/bin/clang++-7       -rdynamic CMakeFiles/cmTC_14ab8.dir/testCXXCompiler.cxx.o  -o cmTC_14ab8 
+make[1]: Leaving directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
+
+
+
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_4ca93/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4ca93.dir/build.make CMakeFiles/cmTC_4ca93.dir/build
-gmake[1]: Entering directory '/home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/arm-linux-gnueabihf-g++   -v -o CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp
-Using built-in specs.
-COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-g++
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Run Build Command(s):/usr/bin/make cmTC_11135/fast && /usr/bin/make -f CMakeFiles/cmTC_11135.dir/build.make CMakeFiles/cmTC_11135.dir/build
+make[1]: Entering directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o
+/bin/clang++-7    -v -o CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)
+Target: armv6k-unknown-linux-gnueabihf
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/10/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccQfYgf6.s
-GNU C++14 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)
-	compiled by GNU C version 10.2.1 20210110, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.0, isl version isl-0.23-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/10"
-ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
-ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/include-fixed"
-ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/include"
+InstalledDir: /bin
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8
+Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Candidate multilib: .;@m32
+Selected multilib: .;@m32
+ "/usr/lib/llvm-7/bin/clang" -cc1 -triple armv6k-unknown-linux-gnueabihf -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu mpcore -target-feature +strict-align -target-abi aapcs-linux -mfloat-abi hard -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /usr/lib/llvm-7/lib/clang/7.0.1 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8/backward -internal-isystem /usr/include/clang/7.0.1/include/ -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-7/lib/clang/7.0.1/include -internal-externc-isystem /usr/include/arm-linux-gnueabihf -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -faddrsig
+clang -cc1 version 7.0.1 based upon LLVM 7.0.1 default target armv6k-unknown-linux-gnueabihf
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8"
+ignoring duplicate directory "/usr/include/clang/7.0.1/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/include/c++/10
- /usr/include/arm-linux-gnueabihf/c++/10
- /usr/include/c++/10/backward
- /usr/lib/gcc/arm-linux-gnueabihf/10/include
+ /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8
+ /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8
+ /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8/backward
+ /usr/include/clang/7.0.1/include
  /usr/local/include
  /usr/include/arm-linux-gnueabihf
  /usr/include
 End of search list.
-GNU C++14 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)
-	compiled by GNU C version 10.2.1 20210110, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.0, isl version isl-0.23-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: db87415434a7c3b71e7ddc297314da99
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccQfYgf6.s
-GNU assembler version 2.35.2 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.35.2
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-Linking CXX executable cmTC_4ca93
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ca93.dir/link.txt --verbose=1
-/usr/bin/arm-linux-gnueabihf-g++  -v -rdynamic CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4ca93 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-g++
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper
-Target: arm-linux-gnueabihf
-Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Linking CXX executable cmTC_11135
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11135.dir/link.txt --verbose=1
+/bin/clang++-7      -v -rdynamic CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_11135 
+clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)
+Target: armv6k-unknown-linux-gnueabihf
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) 
-COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/
-LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4ca93' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/10/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSWQ6rB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -o cmTC_4ca93 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/10 -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4ca93' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-gmake[1]: Leaving directory '/home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp'
+InstalledDir: /bin
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0
+Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8
+Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8
+Candidate multilib: .;@m32
+Selected multilib: .;@m32
+ "/bin/ld" -export-dynamic -X --hash-style=both --build-id --eh-frame-hdr -m armelf_linux_eabi -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -o cmTC_11135 /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /bin/../lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/bin/../lib/gcc/arm-linux-gnueabihf/8 -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib -L/usr/lib/llvm-7/bin/../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/arm-linux-gnueabihf/../../lib -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../.. -L/usr/lib/llvm-7/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /bin/../lib/gcc/arm-linux-gnueabihf/8/crtend.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
+make[1]: Leaving directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp'
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/include/c++/10]
-    add: [/usr/include/arm-linux-gnueabihf/c++/10]
-    add: [/usr/include/c++/10/backward]
-    add: [/usr/lib/gcc/arm-linux-gnueabihf/10/include]
+    add: [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8]
+    add: [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8]
+    add: [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8/backward]
+    add: [/usr/include/clang/7.0.1/include]
     add: [/usr/local/include]
     add: [/usr/include/arm-linux-gnueabihf]
     add: [/usr/include]
   end of search list found
-  collapse include dir [/usr/include/c++/10] ==> [/usr/include/c++/10]
-  collapse include dir [/usr/include/arm-linux-gnueabihf/c++/10] ==> [/usr/include/arm-linux-gnueabihf/c++/10]
-  collapse include dir [/usr/include/c++/10/backward] ==> [/usr/include/c++/10/backward]
-  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/10/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/10/include]
+  collapse include dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8] ==> [/include/c++/8]
+  collapse include dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8] ==> [/include/arm-linux-gnueabihf/c++/8]
+  collapse include dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8/backward] ==> [/include/c++/8/backward]
+  collapse include dir [/usr/include/clang/7.0.1/include] ==> [/usr/include/clang/7.0.1/include]
   collapse include dir [/usr/local/include] ==> [/usr/local/include]
   collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
   collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/include/c++/10;/usr/include/arm-linux-gnueabihf/c++/10;/usr/include/c++/10/backward;/usr/lib/gcc/arm-linux-gnueabihf/10/include;/usr/local/include;/usr/include/arm-linux-gnueabihf;/usr/include]
+  implicit include dirs: [/include/c++/8;/include/arm-linux-gnueabihf/c++/8;/include/c++/8/backward;/usr/include/clang/7.0.1/include;/usr/local/include;/usr/include/arm-linux-gnueabihf;/usr/include]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_4ca93/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4ca93.dir/build.make CMakeFiles/cmTC_4ca93.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/tbox/project/pi-io-test/spi/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/arm-linux-gnueabihf-g++   -v -o CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-g++]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_11135/fast && /usr/bin/make -f CMakeFiles/cmTC_11135.dir/build.make CMakeFiles/cmTC_11135.dir/build]
+  ignore line: [make[1]: Entering directory '/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/bin/clang++-7    -v -o CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)]
+  ignore line: [Target: armv6k-unknown-linux-gnueabihf]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/10/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE /usr/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccQfYgf6.s]
-  ignore line: [GNU C++14 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 10.2.1 20210110  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.0  isl version isl-0.23-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/10"]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/include-fixed"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [InstalledDir: /bin]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m32]
+  ignore line: [ "/usr/lib/llvm-7/bin/clang" -cc1 -triple armv6k-unknown-linux-gnueabihf -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -fuse-init-array -target-cpu mpcore -target-feature +strict-align -target-abi aapcs-linux -mfloat-abi hard -fallow-half-arguments-and-returns -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /usr/lib/llvm-7/lib/clang/7.0.1 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8 -internal-isystem /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8/backward -internal-isystem /usr/include/clang/7.0.1/include/ -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-7/lib/clang/7.0.1/include -internal-externc-isystem /usr/include/arm-linux-gnueabihf -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fno-signed-char -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -faddrsig]
+  ignore line: [clang -cc1 version 7.0.1 based upon LLVM 7.0.1 default target armv6k-unknown-linux-gnueabihf]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8"]
+  ignore line: [ignoring duplicate directory "/usr/include/clang/7.0.1/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/include/c++/10]
-  ignore line: [ /usr/include/arm-linux-gnueabihf/c++/10]
-  ignore line: [ /usr/include/c++/10/backward]
-  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/10/include]
+  ignore line: [ /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8]
+  ignore line: [ /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/arm-linux-gnueabihf/c++/8]
+  ignore line: [ /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../include/c++/8/backward]
+  ignore line: [ /usr/include/clang/7.0.1/include]
   ignore line: [ /usr/local/include]
   ignore line: [ /usr/include/arm-linux-gnueabihf]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++14 (Raspbian 10.2.1-6+rpi1) version 10.2.1 20210110 (arm-linux-gnueabihf)]
-  ignore line: [	compiled by GNU C version 10.2.1 20210110  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.0  isl version isl-0.23-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: db87415434a7c3b71e7ddc297314da99]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [ as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccQfYgf6.s]
-  ignore line: [GNU assembler version 2.35.2 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Raspbian) 2.35.2]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  ignore line: [Linking CXX executable cmTC_4ca93]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ca93.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/arm-linux-gnueabihf-g++  -v -rdynamic CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4ca93 ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-g++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper]
-  ignore line: [Target: arm-linux-gnueabihf]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Raspbian 10.2.1-6+rpi1' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv6 --with-fpu=vfp --with-float=hard --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Linking CXX executable cmTC_11135]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11135.dir/link.txt --verbose=1]
+  ignore line: [/bin/clang++-7      -v -rdynamic CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_11135 ]
+  ignore line: [clang version 7.0.1-8+rpi3+deb10u2 (tags/RELEASE_701/final)]
+  ignore line: [Target: armv6k-unknown-linux-gnueabihf]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.2.1 20210110 (Raspbian 10.2.1-6+rpi1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/10/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/10/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4ca93' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/10/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSWQ6rB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -o cmTC_4ca93 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/10 -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/10/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o]
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/10/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccSWQ6rB.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+  ignore line: [InstalledDir: /bin]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/4.9.4]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/5.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/6.5.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/7.3.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Selected GCC installation: /bin/../lib/gcc/arm-linux-gnueabihf/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m32]
+  link line: [ "/bin/ld" -export-dynamic -X --hash-style=both --build-id --eh-frame-hdr -m armelf_linux_eabi -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -o cmTC_11135 /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /bin/../lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/bin/../lib/gcc/arm-linux-gnueabihf/8 -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib -L/usr/lib/llvm-7/bin/../lib -L/lib/arm-linux-gnueabihf -L/lib/../lib -L/usr/lib/arm-linux-gnueabihf -L/usr/lib/../lib -L/usr/lib/arm-linux-gnueabihf/../../lib -L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../.. -L/usr/lib/llvm-7/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /bin/../lib/gcc/arm-linux-gnueabihf/8/crtend.o /bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/bin/ld] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=both] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib/ld-linux-armhf.so.3] ==> ignore
-    arg [-X] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-m] ==> ignore
-    arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_4ca93] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/10] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/10]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf]
-    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/10/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../..]
+    arg [cmTC_11135] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8]
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf]
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib]
+    arg [-L/usr/lib/llvm-7/bin/../lib] ==> dir [/usr/lib/llvm-7/bin/../lib]
     arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_4ca93.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/arm-linux-gnueabihf/../../lib] ==> dir [/usr/lib/arm-linux-gnueabihf/../../lib]
+    arg [-L/bin/../lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../..]
+    arg [-L/usr/lib/llvm-7/bin/../lib] ==> dir [/usr/lib/llvm-7/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_11135.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -397,15 +497,23 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/10] ==> [/usr/lib/gcc/arm-linux-gnueabihf/10]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
-  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/10/../../..] ==> [/usr/lib]
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/crtend.o] ==> ignore
+    arg [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o] ==> ignore
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8] ==> [/lib/gcc/arm-linux-gnueabihf/8]
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../../../lib] ==> [/lib]
+  collapse library dir [/usr/lib/llvm-7/bin/../lib] ==> [/usr/lib/llvm-7/lib]
   collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/lib/../lib] ==> [/lib]
   collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf/../../lib] ==> [/usr/lib]
+  collapse library dir [/bin/../lib/gcc/arm-linux-gnueabihf/8/../../..] ==> [/lib]
+  collapse library dir [/usr/lib/llvm-7/bin/../lib] ==> [/usr/lib/llvm-7/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/10;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit dirs: [/lib/gcc/arm-linux-gnueabihf/8;/lib/arm-linux-gnueabihf;/lib;/usr/lib/llvm-7/lib;/usr/lib/arm-linux-gnueabihf;/usr/lib]
   implicit fwks: []
 
 

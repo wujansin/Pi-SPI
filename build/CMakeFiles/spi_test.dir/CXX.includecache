@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tbox/project/pi-io-test/spi/src/spi_test.cpp
+/home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp
 stdio.h
 -
 wiringPi.h
