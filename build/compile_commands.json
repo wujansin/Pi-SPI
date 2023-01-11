@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/tbox/project/pi-io-test/spi/build",
-  "command": "/usr/bin/arm-linux-gnueabihf-gcc   -g -o CMakeFiles/spi_test.dir/spi_test.c.o -c /home/tbox/project/pi-io-test/spi/src/spi_test.c",
-  "file": "/home/tbox/project/pi-io-test/spi/src/spi_test.c"
+  "command": "/usr/bin/arm-linux-gnueabihf-g++   -O3 -DNDEBUG -o CMakeFiles/spi_test.dir/spi_test.cpp.o -c /home/tbox/project/pi-io-test/spi/src/spi_test.cpp",
+  "file": "/home/tbox/project/pi-io-test/spi/src/spi_test.cpp"
 }
 ]

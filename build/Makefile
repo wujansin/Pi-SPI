@@ -142,32 +142,32 @@ spi_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/build
 .PHONY : spi_test/fast
 
-spi_test.o: spi_test.c.o
+spi_test.o: spi_test.cpp.o
 
 .PHONY : spi_test.o
 
 # target to build an object file
-spi_test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/spi_test.c.o
-.PHONY : spi_test.c.o
+spi_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/spi_test.cpp.o
+.PHONY : spi_test.cpp.o
 
-spi_test.i: spi_test.c.i
+spi_test.i: spi_test.cpp.i
 
 .PHONY : spi_test.i
 
 # target to preprocess a source file
-spi_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/spi_test.c.i
-.PHONY : spi_test.c.i
+spi_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/spi_test.cpp.i
+.PHONY : spi_test.cpp.i
 
-spi_test.s: spi_test.c.s
+spi_test.s: spi_test.cpp.s
 
 .PHONY : spi_test.s
 
 # target to generate assembly for a file
-spi_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/spi_test.c.s
-.PHONY : spi_test.c.s
+spi_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/spi_test.cpp.s
+.PHONY : spi_test.cpp.s
 
 # Help Target
 help:
