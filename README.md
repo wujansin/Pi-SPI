@@ -16,3 +16,12 @@
     * int wiringPiSPIDataRW (int channel, unsigned char *data, int len) ;
     * channel:  0 or 1
     * speed:  500,000 through 32,000,000 
+  
+## 2022/02/12
+* Delay Function
+  * void delay (unsigned int howLong)
+    * delay ms
+  * void delayMicroseconds (unsigned int howLong)
+    * delay us
+* Add W25Q32
+  *  
