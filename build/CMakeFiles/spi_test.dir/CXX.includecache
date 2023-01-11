@@ -6,10 +6,32 @@
 
 #IncludeRegexTransform: 
 
+/home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp
+stdio.h
+-
+stdint.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+wiringPi.h
+-
+wiringPiSPI.h
+-
+W25Q32.h
+/home/pi/project/pi-io/Pi-SPI/src/W25Q32.h
+
+/home/pi/project/pi-io/Pi-SPI/src/W25Q32.h
+
 /home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp
 stdio.h
 -
 wiringPi.h
+-
+wiringPiSPI.h
 -
 time.h
 -
@@ -23,6 +45,6 @@ sys/wait.h
 -
 iostream
 -
-wiringPiSPI.h
--
+W25Q32.h
+/home/pi/project/pi-io/Pi-SPI/src/W25Q32.h
 

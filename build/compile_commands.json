@@ -3,5 +3,10 @@
   "directory": "/home/pi/project/pi-io/Pi-SPI/build",
   "command": "/bin/clang++-7    -g   -o CMakeFiles/spi_test.dir/spi_test.cpp.o -c /home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp",
   "file": "/home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp"
+},
+{
+  "directory": "/home/pi/project/pi-io/Pi-SPI/build",
+  "command": "/bin/clang++-7    -g   -o CMakeFiles/spi_test.dir/W25Q32.cpp.o -c /home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp",
+  "file": "/home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp"
 }
 ]

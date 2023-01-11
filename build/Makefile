@@ -123,6 +123,33 @@ spi_test/fast:
 	$(MAKE) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/build
 .PHONY : spi_test/fast
 
+W25Q32.o: W25Q32.cpp.o
+
+.PHONY : W25Q32.o
+
+# target to build an object file
+W25Q32.cpp.o:
+	$(MAKE) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/W25Q32.cpp.o
+.PHONY : W25Q32.cpp.o
+
+W25Q32.i: W25Q32.cpp.i
+
+.PHONY : W25Q32.i
+
+# target to preprocess a source file
+W25Q32.cpp.i:
+	$(MAKE) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/W25Q32.cpp.i
+.PHONY : W25Q32.cpp.i
+
+W25Q32.s: W25Q32.cpp.s
+
+.PHONY : W25Q32.s
+
+# target to generate assembly for a file
+W25Q32.cpp.s:
+	$(MAKE) -f CMakeFiles/spi_test.dir/build.make CMakeFiles/spi_test.dir/W25Q32.cpp.s
+.PHONY : W25Q32.cpp.s
+
 spi_test.o: spi_test.cpp.o
 
 .PHONY : spi_test.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... spi_test"
 	@echo "... edit_cache"
+	@echo "... W25Q32.o"
+	@echo "... W25Q32.i"
+	@echo "... W25Q32.s"
 	@echo "... spi_test.o"
 	@echo "... spi_test.i"
 	@echo "... spi_test.s"

@@ -10,6 +10,7 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <iostream>
+#include "W25Q32.h"
 
 
 using namespace std;

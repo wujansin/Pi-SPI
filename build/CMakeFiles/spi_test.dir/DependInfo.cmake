@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp" "/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/spi_test.dir/W25Q32.cpp.o"
   "/home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp" "/home/pi/project/pi-io/Pi-SPI/build/CMakeFiles/spi_test.dir/spi_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
