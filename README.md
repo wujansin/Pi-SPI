@@ -24,4 +24,5 @@
   * *void delayMicroseconds (unsigned int howLong)*
     * delay us
 * Add W25Q32
-  *  
+   * Add W25Q32 API: W25Q32.cpp .h
+   * Ads utility API: utility.cpp .h
