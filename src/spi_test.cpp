@@ -41,16 +41,18 @@ void kill_child(int sig)
 
 void showCommand(void)
 {
-	cout <<"\n\n\n";
-	cout <<" Winbond SE command\n";
-	cout <<"-------------------------\n";
-	cout <<"(0):  	\n";
-	cout <<"(1):  	\n";
-	cout <<"(2):   	\n";
-	cout <<"(3):   	\n";
-	cout <<"(4):   	\n";
-	cout <<"(l):  	list menu\n";
-	cout <<"(Q):  	exit program \n";
+	cout <<endl;
+	cout <<"------------------------"<<endl;
+	cout <<" Winbond SE command		"<<endl;
+	cout <<"------------------------"<<endl;
+	cout <<"(0): GPIO Test: LED ON"<<endl;
+	cout <<"(1): GPIO Test: LED OFF"<<endl;
+	cout <<"(2): Get W25Qxx UID 		"<<endl;
+	cout <<"(3): Get W25Qxx JEDEC ID 	"<<endl;
+	cout <<"(4): Write Page"<<endl;
+	cout <<"(5): Read Page"<<endl;
+	cout <<"(L): List menu"<<endl;
+	cout <<"(Q): Exit program "<<endl;
 }
 
 int main (void)
@@ -94,7 +96,14 @@ int main (void)
 		int spi_fd;
 		int rc;
 		unsigned char jedc[3],uid[8],buf[256];      // JEDEC-ID, Unique ID.
-		//cout << "In Parent process, pid =" <<getpid() <<endl;		
+		//cout << "In Parent process, pid =" <<getpid() <<endl;	
+		
+		spi_fd = wiringPiSPISetup (SPI_CH0, SPI_SPEED);
+		if(spi_fd == -1)
+			cout <<"SPI Setup Channel:"<< SPI_CH0 <<" error"<<endl;
+		else
+			cout <<"SPI Setup Channel:"<< SPI_CH0 <<" OK"<<endl;		
+		
 		showCommand();
 		for (;;)
 		{
@@ -112,28 +121,27 @@ int main (void)
 					break;
 
 				case '2':
-					printf("Press 2: SPI CH0 Init\n");
-					spi_fd = wiringPiSPISetup (SPI_CH0, SPI_SPEED);
-					if(spi_fd == -1)
-						cout <<"SPI Setup Channel:"<< SPI_CH0 <<" error"<<endl;
-					else
-						cout <<"SPI Setup Channel:"<< SPI_CH0 <<" OK"<<endl;	
+					printf("Press 2: Read W25Qxx UID\n");
+					W25Q32_readUniqieID(uid);
+					cout<<"Unique ID:";    		
+					printBinary(uid,8);
 					break;
 
 				case '3':
+					
 					printf("Press 3: Read W25Qxx JEDEC ID, Unique ID\n");
-					{
-						//W25Q32_readManufacturer(jedc);
-						//delay(10);
-						W25Q32_readUniqieID(uid);
-   						//cout<<"JEDEC ID:";
-    					//printBinary(jedc,3);
-						cout<<"Unique ID:";
-    					printBinary(uid,8);
-					}
-					break;		
+					W25Q32_readManufacturer(jedc);
+   					cout<<"JEDEC ID:";
+    				printBinary(jedc,3);								
+					break;
 
 				case '4':
+					printf("Press 5: Write Data to W25Q32\n");
+					
+					break;					
+
+				case '5':
+					//讀取資料（從位址 0 獲取 256 位元組）
 					printf("Press 4: Read 256 bytes from W25Q32\n");
 					// Read 256 byte data from Address=0
     				memset(buf,0,256);
@@ -142,10 +150,7 @@ int main (void)
     				hex_dump(buf,256);					
 					break;
 
-				case '5':
-					printf("Press 5: Read Data from W25Q32\n");
-					
-					break;
+
 
 				case 'l':
 
