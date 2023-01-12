@@ -143,7 +143,8 @@ void printBinary(unsigned char *input, int inLength)
 }
 
 
-void hex_dump(uint8_t *dt, uint32_t n) {
+void hex_dump(uint8_t *dt, uint32_t n) 
+{
   uint16_t clm = 0;
   uint8_t data;
   uint8_t sum;
