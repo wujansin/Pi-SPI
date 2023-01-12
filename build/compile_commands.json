@@ -1,17 +1,17 @@
 [
 {
-  "directory": "/home/tbox/project/pi-io-test/spi/build",
-  "command": "/usr/bin/clang++-11   -g -o CMakeFiles/spi_test.dir/spi_test.cpp.o -c /home/tbox/project/pi-io-test/spi/src/spi_test.cpp",
-  "file": "/home/tbox/project/pi-io-test/spi/src/spi_test.cpp"
+  "directory": "/home/pi/project/pi-io/Pi-SPI/build",
+  "command": "/bin/g++-8    -g   -o CMakeFiles/spi_test.dir/spi_test.cpp.o -c /home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp",
+  "file": "/home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp"
 },
 {
-  "directory": "/home/tbox/project/pi-io-test/spi/build",
-  "command": "/usr/bin/clang++-11   -g -o CMakeFiles/spi_test.dir/W25Q32.cpp.o -c /home/tbox/project/pi-io-test/spi/src/W25Q32.cpp",
-  "file": "/home/tbox/project/pi-io-test/spi/src/W25Q32.cpp"
+  "directory": "/home/pi/project/pi-io/Pi-SPI/build",
+  "command": "/bin/g++-8    -g   -o CMakeFiles/spi_test.dir/W25Q32.cpp.o -c /home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp",
+  "file": "/home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp"
 },
 {
-  "directory": "/home/tbox/project/pi-io-test/spi/build",
-  "command": "/usr/bin/clang++-11   -g -o CMakeFiles/spi_test.dir/utility.cpp.o -c /home/tbox/project/pi-io-test/spi/src/utility.cpp",
-  "file": "/home/tbox/project/pi-io-test/spi/src/utility.cpp"
+  "directory": "/home/pi/project/pi-io/Pi-SPI/build",
+  "command": "/bin/g++-8    -g   -o CMakeFiles/spi_test.dir/utility.cpp.o -c /home/pi/project/pi-io/Pi-SPI/src/utility.cpp",
+  "file": "/home/pi/project/pi-io/Pi-SPI/src/utility.cpp"
 }
 ]
