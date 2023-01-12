@@ -107,7 +107,7 @@ void W25Q32_readManufacturer(uint8_t* d) {
   UNUSED(rc);
   memset(data,0,sizeof(data));
   data[0] = CMD_JEDEC_ID;
-  rc = wiringPiSPIDataRW (_spich,data,sizeof(data));
+  rc = wiringPiSPIDataRW (_spich, data, sizeof(data));
   //spcDump("readManufacturer",rc,data,4);
   memcpy(d,&data[1],3);
 }
@@ -122,8 +122,8 @@ void W25Q32_readUniqieID(uint8_t* d) {
   UNUSED(rc);
   memset(data,0,sizeof(data));
   data[0] = CMD_READ_UNIQUE_ID;
-  rc = wiringPiSPIDataRW (_spich,data,sizeof(data));
-  //spcDump("readUniqieID",rc,data,13);
+  rc = wiringPiSPIDataRW (_spich, data,sizeof(data));
+  spcDump("readUniqieID",rc,data,13);
   memcpy(d,&data[5],8);
 }
 

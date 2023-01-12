@@ -1,0 +1,1 @@
+/usr/bin/clang++-11 -g -rdynamic CMakeFiles/spi_test.dir/spi_test.cpp.o CMakeFiles/spi_test.dir/W25Q32.cpp.o CMakeFiles/spi_test.dir/utility.cpp.o -o spi_test  -lwiringPi 

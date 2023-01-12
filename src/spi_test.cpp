@@ -2,6 +2,7 @@
 // wiringPi Lib Function Test
 //********************************
 #include <stdio.h>
+#include <string.h>
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 #include <time.h>
@@ -11,6 +12,7 @@
 #include <sys/wait.h>
 #include <iostream>
 #include "W25Q32.h"
+#include "utility.h"
 
 
 using namespace std;
@@ -26,7 +28,7 @@ using namespace std;
 #define BTN_OFF			LOW
 #define BTN_READ(n)		digitalRead(BTN_##n)
  
-#define SPI_SPEED		1000000 //(1M)   Max: 32,000,000 (32M)
+#define SPI_SPEED		100000 //(100K)   Max: 32,000,000 (32M)
 #define SPI_CH0			0
 #define SPI_CH1			1
 
@@ -47,10 +49,6 @@ void showCommand(void)
 	cout <<"(2):   	\n";
 	cout <<"(3):   	\n";
 	cout <<"(4):   	\n";
-	cout <<"(a):  	\n";
-	cout <<"(g): 	\n";
-	cout <<"(j): 	\n";
-	cout <<"(k):  	\n";
 	cout <<"(l):  	list menu\n";
 	cout <<"(Q):  	exit program \n";
 }
@@ -94,6 +92,8 @@ int main (void)
 		/* parent process */
 		int ch;
 		int spi_fd;
+		int rc;
+		unsigned char jedc[3],uid[8],buf[256];      // JEDEC-ID, Unique ID.
 		//cout << "In Parent process, pid =" <<getpid() <<endl;		
 		showCommand();
 		for (;;)
@@ -105,10 +105,12 @@ int main (void)
 					printf("Press 0\n");
 					LED_ON(RED);
 					break;
+
 				case '1':
 					LED_OFF(RED);
 					printf("Press 1\n");
 					break;
+
 				case '2':
 					printf("Press 2: SPI CH0 Init\n");
 					spi_fd = wiringPiSPISetup (SPI_CH0, SPI_SPEED);
@@ -119,16 +121,25 @@ int main (void)
 					break;
 
 				case '3':
-					printf("Press 3: SPI Send Data\n");
+					printf("Press 3: Read W25Qxx JEDEC ID, Unique ID\n");
 					{
-						unsigned char data[] = { 0x00,0x11,0x22,0x33,0x44,0x55,0x66,0x77,0x88,0x99 };
-						wiringPiSPIDataRW(SPI_CH0, data, sizeof(data));
+						//W25Q32_readManufacturer(jedc);
+						//delay(10);
+						W25Q32_readUniqieID(uid);
+   						//cout<<"JEDEC ID:";
+    					//printBinary(jedc,3);
+						cout<<"Unique ID:";
+    					printBinary(uid,8);
 					}
 					break;		
 
 				case '4':
-					printf("Press 4: Write Data to W25Q32\n");
-					
+					printf("Press 4: Read 256 bytes from W25Q32\n");
+					// Read 256 byte data from Address=0
+    				memset(buf,0,256);
+    				rc =  W25Q32_read(0, buf, 256);
+    				printf("Read Data: n=%d\n",rc);
+    				hex_dump(buf,256);					
 					break;
 
 				case '5':
