@@ -123,7 +123,7 @@ void W25Q32_readUniqieID(uint8_t* d) {
   memset(data,0,sizeof(data));
   data[0] = CMD_READ_UNIQUE_ID;
   rc = wiringPiSPIDataRW (_spich, data,sizeof(data));
-  spcDump("readUniqieID",rc,data,13);
+  //spcDump("readUniqieID",rc,data,13);
   memcpy(d,&data[5],8);
 }
 
@@ -182,10 +182,11 @@ void W25Q32_WriteDisable(void) {
 
 //
 // データの読み込み
-// addr(in): 読込開始アドレス (24ビット 0x000000 - 0xFFFFFF)
+// addr(in): 讀取開始位址 (24 bit 0x000000 - 0xFFFFFF)
 // n(in):読込データ数
 //
-uint16_t W25Q32_read(uint32_t addr,uint8_t *buf,uint16_t n){ 
+uint16_t W25Q32_read(uint32_t addr, uint8_t *buf, uint16_t n)
+{ 
   unsigned char *data;
   int rc;
 

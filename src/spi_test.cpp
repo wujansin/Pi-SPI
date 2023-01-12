@@ -51,6 +51,7 @@ void showCommand(void)
 	cout <<"(3): Get W25Qxx JEDEC ID 	"<<endl;
 	cout <<"(4): Write Page"<<endl;
 	cout <<"(5): Read Page"<<endl;
+	cout <<"(6): Erase Page"<<endl;
 	cout <<"(L): List menu"<<endl;
 	cout <<"(Q): Exit program "<<endl;
 }
@@ -95,9 +96,10 @@ int main (void)
 		int ch;
 		int spi_fd;
 		int rc;
-		unsigned char jedc[3],uid[8],buf[256];      // JEDEC-ID, Unique ID.
+		int n;
+		unsigned char jedc[3],uid[8],buf[256],wdata[256];      // JEDEC-ID, Unique ID.
 		//cout << "In Parent process, pid =" <<getpid() <<endl;	
-		
+		W25Q32_begin(SPI_CH0);
 		spi_fd = wiringPiSPISetup (SPI_CH0, SPI_SPEED);
 		if(spi_fd == -1)
 			cout <<"SPI Setup Channel:"<< SPI_CH0 <<" error"<<endl;
@@ -137,7 +139,12 @@ int main (void)
 
 				case '4':
 					printf("Press 5: Write Data to W25Q32\n");
-					
+					// Write data to Sector=0 Address=0
+    				for (int i=0; i < 256;i++) 
+      					wdata[i]= i;      
+    				
+    				n =  W25Q32_pageWrite(0, 0, wdata, 256);
+    				printf("W25Q32_pageWrite(0,0,d,256): n=%d\n",n);
 					break;					
 
 				case '5':
@@ -150,6 +157,14 @@ int main (void)
     				hex_dump(buf,256);					
 					break;
 
+				case '6':
+					printf("Press 4: Erase  Sector[0] to W25Q32\n");
+					n = W25Q32_eraseSector(0, true);
+    				printf("Erase Sector[0]: n=%d\n",n);
+    				memset(buf,0,256);
+    				n =  W25Q32_read(0, buf, 256);
+    				hex_dump(buf,256);
+					break;
 
 
 				case 'l':

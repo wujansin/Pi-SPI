@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/project/pi-io/Pi-SPI/src/W25Q32.cpp
-stdio.h
--
-stdint.h
--
-stdbool.h
--
-stdlib.h
--
-string.h
--
-wiringPi.h
--
-wiringPiSPI.h
--
-W25Q32.h
-/home/pi/project/pi-io/Pi-SPI/src/W25Q32.h
-
 /home/pi/project/pi-io/Pi-SPI/src/W25Q32.h
 
 /home/pi/project/pi-io/Pi-SPI/src/spi_test.cpp
@@ -51,14 +33,6 @@ W25Q32.h
 /home/pi/project/pi-io/Pi-SPI/src/W25Q32.h
 utility.h
 /home/pi/project/pi-io/Pi-SPI/src/utility.h
-
-/home/pi/project/pi-io/Pi-SPI/src/utility.cpp
-string.h
--
-stdio.h
--
-stdint.h
--
 
 /home/pi/project/pi-io/Pi-SPI/src/utility.h
 

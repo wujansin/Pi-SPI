@@ -2,6 +2,7 @@
     "cmake.sourceDirectory": "${workspaceFolder}/src",
     "files.associations": {
         "*.txt": "cmake",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
